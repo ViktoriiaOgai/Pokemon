@@ -1,0 +1,10 @@
+.ball {
+  width: 160px;
+  margin-bottom: 20px;
+  transition: transform 0.6s ease;
+}
+
+/* Бросок */
+.ball.throw {
+  transform: translate(600px, -220px) rotate(360deg);
+}
