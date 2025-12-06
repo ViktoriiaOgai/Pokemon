@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import Pokeball from "./Pokeball";
-import PokemonCard from "./PokemonCard";
+import Pokeball from "./components/Pokeball";
+import PokemonCard from "./components/PokemonCard";
 
 export default function PokeballPage() {
   const [pokemon, setPokemon] = useState(null);

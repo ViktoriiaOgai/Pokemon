@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import PokeballPage from './components/PokeballPage.jsx';
+import PokeballPage from './pages/PokeballPage';
 
 function App() {
     return (
