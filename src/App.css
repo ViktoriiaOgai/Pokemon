@@ -40,15 +40,10 @@
 .read-the-docs {
   color: #888;
 }
-/* .app-background {
+.app-background {
   min-height: 100vh;
   position: relative;
-} */
-.app-background {
-  position: relative;
-  height: 100%;
-  width: 100%;
-}
+} 
 .app-background::before{
   content: "";
   position: absolute;
