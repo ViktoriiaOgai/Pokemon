@@ -6,18 +6,14 @@ export default function PokeballPage() {
   const [pokemon, setPokemon] = useState(null);
   const [message, setMessage] = useState("");
   const [isThrowing, setIsThrowing] = useState(false);
-  const [caught, setCaught] = useState([]);
-
-  // Загружаем пойманных из localStorage
-  useEffect(() => {
-    const saved = JSON.parse(localStorage.getItem("caughtPokemons")) || [];
-    setCaught(saved);
-  }, []);
-
-  // Сохраняем при каждом изменении массива
-  useEffect(() => {
+  const [caught, setCaught] = useState(() => {
+  const saved = localStorage.getItem("caughtPokemons");
+  return saved ? JSON.parse(saved) : [];
+});
+useEffect(() => {
     localStorage.setItem("caughtPokemons", JSON.stringify(caught));
   }, [caught]);
+  
 
   // --- 1. Начать охоту ---
   const hunt = async () => {

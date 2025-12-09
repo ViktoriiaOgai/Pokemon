@@ -1,18 +1,26 @@
-import { useState } from 'react'
 import './App.css'
-//import PokeballPage from './pages/PokeballPage';
-import HomePage from './pages/HomePage';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import PokeballPage from './pages/PokeballPage'
+import HomePage from './pages/HomePage'
 
 function App() {
-    return (
-    <div className="app-background">
-      {/* весь  интерфейс */}
-           {/*<PokeballPage/>*/}
-          <HomePage/>
-    </div>
- 
+  return (
+    <BrowserRouter>
+      <div className="app-background">
+
+        <nav>
+          <Link to="/">Главная</Link>
+          <Link to="/pokeball">Покебол</Link>
+        </nav>
+
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/pokeball" element={<PokeballPage />} />
+        </Routes>
+
+      </div>
+    </BrowserRouter>
   );
- 
 }
 
-export default App
+export default App;

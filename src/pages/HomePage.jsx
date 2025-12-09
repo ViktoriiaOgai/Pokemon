@@ -41,7 +41,7 @@ export default function HomePage() {
     <div style={{ padding: "20px", textAlign: "center" }}>
       <h1>Пойманные покемоны</h1>
 
-      {caught.length === 0 && <p>Пока никто нет пойманных покемонов</p>}
+      {caught.length === 0 && <p>Пока нет пойманных покемонов</p>}
 
       {/* Список карточек */}
       <div
