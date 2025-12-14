@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import PokemonModal from "./components/PokemonModal";
+import { getPokemon } from "../services/pokemonService";
 
 export default function HomePage() {
   const [caught, setCaught] = useState([]);
@@ -17,10 +18,7 @@ export default function HomePage() {
     if (!selected) return;
 
     async function loadDetails() {
-      const resp = await fetch(
-        `https://pokeapi.co/api/v2/pokemon/${selected.id}`
-      );
-      const data = await resp.json();
+      const data = await getPokemon(selected.id)
       setDetails(data);
     }
 

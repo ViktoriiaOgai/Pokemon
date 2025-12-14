@@ -1,17 +1,15 @@
 import './App.css'
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import PokeballPage from './pages/PokeballPage'
 import HomePage from './pages/HomePage'
+import Header from './layout/Header';
 
 function App() {
   return (
     <BrowserRouter>
       <div className="app-background">
 
-        <nav>
-          <Link to="/">Главная</Link>
-          <Link to="/pokeball">Покебол</Link>
-        </nav>
+       <Header/>
 
         <Routes>
           <Route path="/" element={<HomePage />} />

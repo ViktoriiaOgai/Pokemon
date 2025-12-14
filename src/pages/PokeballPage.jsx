@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Pokeball from "./components/Pokeball";
 import PokemonCard from "./components/PokemonCard";
+import { getPokemon } from "../services/pokemonService";
 
 export default function PokeballPage() {
   const [pokemon, setPokemon] = useState(null);
@@ -22,20 +23,18 @@ useEffect(() => {
 
     const id = Math.floor(Math.random() * 151) + 1;
 
-    try {
-      const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
-      const data = await res.json();
+     try {
+    const data = await getPokemon(id);
 
-      setPokemon({
-        id: data.id,
-        name: data.name,
-        img: data.sprites.other["official-artwork"].front_default,
-      });
-    } catch (e) {
-      setMessage("Ошибка загрузки покемона :(");
-    }
-  };
-
+    setPokemon({
+      id: data.id,
+      name: data.name,
+      img: data.sprites.other["official-artwork"].front_default,
+    });
+  } catch (e) {
+    setMessage("Ошибка загрузки покемона :(");
+  }
+};
   // --- 2. Кинуть покебол ---
   const throwBall = () => {
     setIsThrowing(true);
