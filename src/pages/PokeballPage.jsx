@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Pokeball from "./components/Pokeball";
 import PokemonCard from "./components/PokemonCard";
 import { getPokemon } from "../services/pokemonService";
-import "../../styles/Pokeball.css";
+import "../styles/Pokeball.css";
 
 export default function PokeballPage() {
   const [pokemon, setPokemon] = useState(null);

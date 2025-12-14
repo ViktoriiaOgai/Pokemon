@@ -1,4 +1,5 @@
-import "../../styles/Pokeball.css";
+//import "../../../styles/Pokeball.css";
+
 export default function PokemonModal({ details, onClose, onRelease }) {
   if (!details) return null; // если данных нет — не показываем модалку
 
