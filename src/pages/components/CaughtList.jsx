@@ -1,3 +1,4 @@
+import "../../styles/Pokeball.css";
 export default function CaughtList({ pokemons }) {
   return (
     <div className ="CaughtList"style={{ marginTop: "40px" }}>
