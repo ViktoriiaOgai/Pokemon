@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Pokeball from "./components/Pokeball";
 import PokemonCard from "./components/PokemonCard";
 import { getPokemon } from "../services/pokemonService";
+import "../../styles/Pokeball.css";
 
 export default function PokeballPage() {
   const [pokemon, setPokemon] = useState(null);
@@ -56,21 +57,17 @@ useEffect(() => {
   };
 
   return (
-    <div style={{ textAlign: "center", padding: "40px" }}>
+    <div className = "huntP">
       <h1>Охота на покемонов</h1>
 
       {/* Большой покеболл */}
       <Pokeball state={isThrowing ? "throw" : "idle"} />
 
       {/* Кнопка №1 — Охотиться */}
-      <button
+      <button 
+        className="starthunt"
         onClick={hunt}
-        style={{
-          padding: "10px 20px",
-          fontSize: "18px",
-          marginBottom: "20px",
-          cursor: "pointer",
-        }}
+        
       >
         Охотиться за покемонами
       </button>
@@ -81,12 +78,8 @@ useEffect(() => {
       {/* Кнопка №2 — Кинуть покебол (только если есть покемон) */}
       {pokemon && (
         <button
+        className="shut"
           onClick={throwBall}
-          style={{
-            marginTop: "20px",
-            padding: "10px 20px",
-            fontSize: "18px",
-          }}
         >
           Кинуть покебол
         </button>
@@ -94,7 +87,7 @@ useEffect(() => {
 
       {/* Сообщения */}
       {message && (
-        <p style={{ marginTop: "20px", fontSize: "20px" }}>{message}</p>
+        <p className ="sms">{message}</p>
       )}
     </div>
   );

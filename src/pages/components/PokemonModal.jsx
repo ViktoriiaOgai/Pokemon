@@ -1,43 +1,20 @@
+import "../../styles/Pokeball.css";
 export default function PokemonModal({ details, onClose, onRelease }) {
   if (!details) return null; // если данных нет — не показываем модалку
 
   return (
     <div
+    className="closeonclick"
       onClick={onClose} // клик по фону — закрыть
-      style={{
-        position: "fixed",
-        inset: 0,
-        background: "rgba(0,0,0,0.6)",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        zIndex: 1000,
-      }}
     >
       <div
+        className="clicknotclose"
         onClick={(e) => e.stopPropagation()} // клик внутри не закрывает
-        style={{
-          background: "white",
-          padding: "20px",
-          borderRadius: "15px",
-          width: "300px",
-          textAlign: "center",
-          position: "relative",
-        }}
       >
         {/* Крестик */}
         <button
+          className="cross"
           onClick={onClose}
-          style={{
-            position: "absolute",
-            top: "8px",
-            right: "10px",
-            background: "none",
-            border: "none",
-            fontSize: "20px",
-            cursor: "pointer",
-            opacity: 0.7,
-          }}
         >
           ✕
         </button>
@@ -55,17 +32,8 @@ export default function PokemonModal({ details, onClose, onRelease }) {
         </p>
 
         <button
+          className="release"
           onClick={onRelease}
-          style={{
-            marginTop: "15px",
-            padding: "10px 20px",
-            background: "red",
-            color: "white",
-            border: "none",
-            borderRadius: "10px",
-            cursor: "pointer",
-            fontSize: "16px",
-          }}
         >
           Освободить
         </button>

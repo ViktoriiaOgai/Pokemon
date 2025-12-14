@@ -43,25 +43,13 @@ export default function HomePage() {
 
       {/* Список карточек */}
       <div
-        style={{
-          display: "flex",
-          gap: "20px",
-          flexWrap: "wrap",
-          justifyContent: "center",
-        }}
+      className="list1"
       >
         {caught.map((pokemon) => (
           <div
             key={pokemon.id}
             onClick={() => setSelected(pokemon)}
-            style={{
-              width: "150px",
-              padding: "10px",
-              border: "1px solid #ddd",
-              borderRadius: "10px",
-              cursor: "pointer",
-              background: "white",
-            }}
+            className="list2"
           >
             <img
               src={pokemon.img}

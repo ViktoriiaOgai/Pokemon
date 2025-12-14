@@ -8,3 +8,115 @@
 .ball.throw {
   transform: translate(600px, -220px) rotate(360deg);
 }
+/* кнопка начать охотиться */
+.starthunt {
+   padding: 10px 20px;
+          font-size: 18px;
+          margin-bottom: 20px;
+          cursor: pointer;
+}
+/* контейнер див */
+.huntP {
+  text-align: center;
+   padding: 40px;
+}
+/* Кнопка №2 — Кинуть покебол (только если есть покемон) */
+.shut {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;                    
+}
+/* Сообщения */
+.sms {
+  margin-top: 20px;
+ font-size: 20px;
+}
+/* Модальное окно */
+
+/* Клик по фону закрыть */
+.closeonclick {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+/* Крестик */
+.cross {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+/* клик внутри не закрывает */
+.clicknotclose{
+background: white;
+  padding: 20px;
+  border-radius: 15px;
+  width: 300px;
+  text-align: center;
+  position: relative;
+}
+/* кнопка освоблодить */
+.release{
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/*CaughtList Пойманные покемоны*/
+.CaughtList {
+  margin-top: 40px;
+}
+.CaughtList1 {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.CaughtList2 {
+  border: 2px solid #444;
+  padding: 10px;
+  border-radius: 8px;
+  width: 120px;
+  text-align: center;
+}
+
+/*PokemonCard*/
+.PokemonCard {
+  margin-top: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  border: 3px solid #d62828;
+  display: inline-block;
+}
+
+/*HomePage*/
+/* Список карточек */
+.list1 {
+   display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.list2 {
+  width: 150px;
+  padding: 0px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  cursor: pointer;
+  background: white;
+}
